@@ -2,6 +2,7 @@ part of 'pages.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
+  static const String routeName = '/Bookingform';
 
   @override
   State<homePage> createState() => _homePageState();
@@ -139,7 +140,7 @@ class _homePageState extends State<homePage> {
                   child: Padding(
                     padding: EdgeInsets.all(16),
                     child: Text(
-                      "Selamat Datang Jangan Salah Jurusan",
+                      "Selamat Datang Salah Jurusan",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                     ),
@@ -154,6 +155,15 @@ class _homePageState extends State<homePage> {
                             "Sejak didirikan 12 tahun yang lalu, Universitas Ciputra saat menerima mahasiswa pertamanya hingga saat ini dengan komitmen penuh terhadap pengembangan kualitas pendidikan, kami terus berinovasi untuk memberikan upaya terbaik dengan terus mengembangkan diri. \nPuji syukur kepada Tuhan Yang Maha Esa atas rahmat dan berkatNya serta terima kasih yang sebesar-besarnya kami ucapkan kepada semua pihak karena dukungan dan kepercayaannya kami dapat meraih Akreditasi Perguruan Tinggi A. \n \nKami sungguh bersyukur karena dengan pencapaian ini Universitas Ciputra bukan saja sebagai penerima akreditasi A bersama perguruan-perguruan tinggi hebat lainnya namun juga menjadi universitas termuda di Jawa Timur dan nomor 4 termuda pada level nasional yang meraih predikat tersebut.Pencapaian ini menjadi pemacu semangat kami dalam berkarya, memberikan yang terbaik dalam dunia pendidikan bagi pembangunan bangsa Indonesia seutuhnya. Mari terus berkarya dan berinovasi.\n \nSalam Entrepreneur!!!"),
                       ),
                     )),
+                Container(
+                  padding: EdgeInsets.all(16),
+                  alignment: Alignment.bottomRight,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, Bookingform.routeName);
+                      },
+                      child: Text('Book Now')),
+                ),
               ],
             )),
       ),
